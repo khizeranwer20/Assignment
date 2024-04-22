@@ -1,0 +1,12 @@
+Question: 3
+function onearray(lens, k){
+    for(let i=0;i<k;i++)
+    {
+        let rotate=lens.pop();
+        lens.unshift(rotate);
+    }
+    return lens;
+  }
+  const InputArray=[1,2,3,4,5,6,7];
+  const k=3;
+  console.log("Rotated:["+ onearray(InputArray,k)+"]");
