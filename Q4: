@@ -1,0 +1,20 @@
+Question: 4
+function print(rows)
+{
+
+for(let i=1;i<=rows;i++)
+{
+    let pattern= "";
+ for(let j=rows-i;j>0;j--)
+ {
+    pattern += ".";
+ }
+ for(let k=0;k<i;k++){
+    pattern +=i;
+ }
+ console.log(pattern);
+}
+
+ 
+}
+print(5);
