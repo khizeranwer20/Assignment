@@ -1,0 +1,9 @@
+Question: 2
+var firstInput=[1,2,3];
+var secondInput=[4,5,6];
+function combine ()
+{
+    let X=  [firstInput + secondInput] ;
+    return X;
+}
+console.log(combine());
