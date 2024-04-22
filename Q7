@@ -1,0 +1,14 @@
+Question 7:
+Given the string, check if it is a palindrome.
+Example
+For inputString = "aabaa", the output should be = true; For inputString = "abac", the output should be = false; For inputString = "a", the output should be = true.
+
+function Palindrome(inputString)
+ {
+    const reversedString = inputString.split('').reverse().join('');
+    return inputString === reversedString;
+}
+
+console.log(Palindrome("aabaa"));
+console.log(Palindrome("abac")); 
+console.log(Palindrome("a")); 
