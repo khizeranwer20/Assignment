@@ -1,0 +1,33 @@
+// Question 12:
+// Given the list of items and their actual prices and sold prices. Find the number of items in sold products which has wrong prices
+// Example Input
+// Products = ['eggs', 'milk', 'cheese'];
+// productPrices = [2.89, 3.29, 5.79];
+// productSold = ['eggs', 'eggs', 'cheese', 'milk']
+// soldPrice = [2.89, 2.99, 5.97, 3.29];
+// Example Output Here
+// eggs has 2.99 price which is worng milk has 5.97 price which is worng So we will return 2 in this example.
+
+
+const final={
+    Products:['eggs', 'milk', 'cheese'],     
+    productPrices:[2.89, 3.29, 5.79],
+    productSold:['eggs', 'eggs', 'cheese', 'milk'],
+    soldPrice:[2.89, 2.99, 5.97, 3.29]
+ }  
+function countWrongPrices(final) {
+
+    let count = 0;
+    
+    for (let i = 0; i < final.productSold.length; i++) {
+        const soldItemIndex = final.Products.indexOf(final.productSold[i]);
+        
+        if (soldItemIndex !== -1 && final.productPrices[soldItemIndex] !== final.soldPrice[i]) {
+    
+            console.log(`The ${final.productSold[i]} has ${final.soldPrice[i]} price which is sold wrong`);
+            count++;
+        }
+    }
+       return "The total products Sold wrong are: " + count;
+}
+console.log(countWrongPrices(final));
