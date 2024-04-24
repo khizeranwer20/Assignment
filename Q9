@@ -1,0 +1,26 @@
+// Question 9:
+// Count frequencies of each entry in an array For example const fruitBasket = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ];
+// It should return an object like this { banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1 }.
+
+
+function frequency(arr)
+{
+    let fruitcount = {}; 
+    let z =arr.length;      
+    for (let i = 0; i < z; i++)
+    {   
+    const fruits = arr[i];
+    if (fruitcount[fruits])
+    {
+        fruitcount[fruits]++;
+    }
+    else
+    {
+        fruitcount[fruits] = 1;
+    }
+    
+}
+return fruitcount;
+    }
+arr = ['banana', 'cherry', 'orange', 'apple', 'cherry', 'orange', 'apple', 'banana', 'cherry', 'orange', 'fig' ]
+console.log(frequency(arr ));
